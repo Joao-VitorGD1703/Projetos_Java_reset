@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Rascunho {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite um numero");
+		int teste = sc.nextInt();
+		
+		int [] arr1 = new int[10];
+		
+		
+		for(int i =0; i>10; i++) {
+			arr1[i] = i;
+			System.out.println(arr1[1]);
+		}
+		
+		
+
+		sc.close();
+	}
+
+}

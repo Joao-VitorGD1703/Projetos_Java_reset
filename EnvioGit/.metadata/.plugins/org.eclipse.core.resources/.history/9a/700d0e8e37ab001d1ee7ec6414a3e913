@@ -1,0 +1,57 @@
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class desafio2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite o número de alunos: ");
+		int numDeAlunos = sc.nextInt();
+
+		int[] rm = new int[numDeAlunos];
+		int[] nota1 = new int[numDeAlunos];
+		int[] nota2 = new int[numDeAlunos];
+		double[] media = new double[numDeAlunos];
+		
+		for(int i =0; i < numDeAlunos; i++) {
+			
+			System.out.println("Digite o número do RM do aluno: ");
+			rm[i] = sc.nextInt();
+			
+			System.out.println("Digite a primeira nota: ");
+			nota1[i] = sc.nextInt();
+			
+			System.out.println("Digite a segunda  nota: ");
+			nota2[i] = sc.nextInt();
+			
+			media[i] = (nota1[i] + nota2[i])/2;
+			
+					
+		}
+		
+		System.out.print("Os Alunos de segunte RM obtiveram as seguntes médias:"); 
+		for(int j =0; j< numDeAlunos; j++) {
+			
+			System.out.println(rm[j] + " ");
+		}
+		System.out.println();
+		
+		System.out.print("médias:");
+		for(int k =0; k< numDeAlunos; k++) {
+		 
+			System.out.println(media[k] + " ");
+		}
+		
+			
+			
+			
+
+		
+		
+
+		sc.close();
+		
+	}
+
+}

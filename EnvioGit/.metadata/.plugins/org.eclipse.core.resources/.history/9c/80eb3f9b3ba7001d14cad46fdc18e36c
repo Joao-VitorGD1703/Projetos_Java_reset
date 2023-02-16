@@ -1,0 +1,52 @@
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class Rascunho {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Digite o número de alunos");
+		int alunos = sc.nextInt();
+		int notas = alunos *2;
+	double [] arr1 = new double[alunos];
+	double [] arr2 = new double[alunos];
+	double [] arr3 = new double[alunos];
+	
+	for (int alu = 0; alu < alunos; alu++) {
+		
+		for (int k = 0; k < notas; k++) {
+			System.out.println("Digite as primeiras notas do aluno: " + k);
+			double aux1 = sc.nextDouble();
+			arr3[k] = aux1;
+			
+			
+			for (int j = 0; j < notas; j++) {
+				System.out.println("Digite as segundas notas do aluno: " + j);
+				double aux2 = sc.nextDouble();
+				arr2[k] = aux2;
+				
+				for(int i =0; i< arr1.length; i++) {
+					arr1[i] = (arr2[i] + arr3[i]) ;
+					
+					
+				}
+				
+			}
+		}
+		
+		
+		
+	}
+	
+	for(int i =0; i< arr1.length; i++) {
+	
+		System.out.println(arr1[i]);
+		
+	}
+	
+		
+		
+		System.out.println("Fim");
+	}
+
+}

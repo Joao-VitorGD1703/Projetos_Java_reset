@@ -1,0 +1,107 @@
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class desafio2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite o número de alunos: ");
+		int  numDeAlunos = sc.nextInt();
+
+		double[] rm = new double[numDeAlunos];
+		double[] nota1 = new double[numDeAlunos];
+		double[] nota2 = new double[numDeAlunos];
+		double[] media = new double[numDeAlunos];
+		
+	
+		double numDeA = numDeAlunos;
+			
+			entradaDeDados(rm, nota1, nota2, numDeA);
+			
+					
+		
+		
+		System.out.print("Os Alunos de segunte RM obtiveram as seguntes médias:"); 
+		for(int j =0; j< numDeAlunos; j++) {
+			
+			System.out.print(rm[j] + " ");
+		}
+		System.out.println();
+		
+		System.out.print("médias:");
+		for(int k =0; k< numDeAlunos; k++) {
+		 
+			System.out.print(media[k] + " ");
+		}
+		
+		
+			
+			
+			
+
+		
+		
+
+		sc.close();
+		
+	}
+	
+	public static void entradaDeDados (double[] rm, double[] nota1, double[] nota2, double numDeA) {
+		Scanner sc = new Scanner(System.in);
+		
+		int alunos = (int) numDeA;
+		for(int i =0; i<alunos; i++) {
+			
+			System.out.println("Digite o número do RM do aluno: ");
+			rm[i] = sc.nextDouble();
+			
+			System.out.println("Digite a primeira nota: ");
+			nota1[i] = sc.nextDouble();
+			
+			System.out.println("Digite a segunda  nota: ");
+			nota2[i] = sc.nextDouble();
+			
+			media(nota1, nota2, numDeA, nota2);
+			
+			
+		}
+		
+	}
+	public static double[] media ( double[] nota1, double[] nota2,  double numDeA, double[] media) {
+		int alunos = (int) numDeA;
+		for(int i =0; i<alunos; i++) {
+			
+			
+			
+			media[i] = (nota1[i] + nota2[i])/2;
+			geraListaAprovados(nota1, nota2,  numDeA, media);
+			
+			
+		}
+		return media;
+		
+	}
+	public static double[] geraListaAprovados ( double[] nota1, double[] nota2,  double numDeA, double[] media) {
+		int alunos = (int) numDeA;
+		for(int i =0; i<alunos; i++) {
+			
+			if(media[i] >= 6) {
+				System.out.println("Aprovado");
+			}else {
+			
+				System.out.println("Reprovado");
+			}
+			
+			
+			
+			
+		}
+		return media;
+		
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+public class TentativaSemClasses {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int Numero_aluno;
+		
+		System.out.println("Digite o número de alunos: ");
+		int alunos = sc.nextInt();
+		int provasTotal = 2;
+		int provasPorAluno = 1;
+		int[] rms = new int[alunos]; 
+		double[] nota1 = new double[alunos]; 
+		double[] nota2 = new double[alunos]; 
+		double[] media = new double[alunos]; 
+		
+		
+		
+		for(int i =0; i<rms.length; i++) {
+			//Numero_aluno = i + 1;
+			System.out.println("Digite os RM do " + i + " alunos: ");
+			rms[i] = sc.nextInt();
+			
+			
+			for(int n1 = 0; n1 < provasPorAluno; n1++) {
+				System.out.println("Digite a primeira nota do aluno " + n1 + ": ");
+				nota1[n1] = sc.nextInt();
+				
+				for(int n2 = 0; n2 < provasPorAluno; n2++) {
+					System.out.println("Digite a segunda nota do aluno " + n2 + ": ");
+					nota2[n2] = sc.nextInt();
+					
+					for(int md =0; md< 2; md++) {
+						double aux = (nota1[md] + nota2[md]) / provasTotal;
+						media[md] = aux;
+						
+						for(int j = 0; j< provasPorAluno; j++) {
+							System.out.println(media[j]);
+							
+						}
+						
+						
+						
+					}
+					
+					
+				}
+				
+			}
+			
+			
+		}
+		
+		
+		
+		 /*for(int j = 0; j< provasPorAluno; j++) {
+				System.out.println(media[j]);
+				
+			}*/
+		 
+		 System.out.println(media[0]);
+		 System.out.println(media[1]);
+		
+		
+		
+		
+
+	}
+
+}

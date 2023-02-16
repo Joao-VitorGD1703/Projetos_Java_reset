@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class TentativaSemClasses {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int Numero_aluno;
+		
+		System.out.println("Digite o número de alunos: ");
+		int alunos = sc.nextInt();
+		
+		
+		int[] rms = new int[alunos]; 
+		
+		for(int i =0; i<rms.length; i++) {
+			Numero_aluno = i + 1;
+			System.out.println("Digite os RM do " + Numero_aluno + " alunos: ");
+			rms[i] = sc.nextInt();
+			
+		}
+		
+		for(int j = 0; j< rms.length; j++) {
+			System.out.println(rms[j]);
+		}
+
+	}
+
+}
